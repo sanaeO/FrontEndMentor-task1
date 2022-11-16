@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:root{
+  --main-color :#2196f3;
+  --second-color :#b9b4b459;
+  --section-color : #ececec;
+  --section-padding-top : 50px;
+  --section-padding-bottom:50px;
+}
+/* Poppins 200 */
+/* @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Poppins:wght@200&display=swap'); */
+/* Poppins 400 */
+/* @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Poppins:ital,wght@0,200;1,400&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Poppins:ital,wght@0,200;0,600;1,400&display=swap');
+/* Poppins 600 */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color:  hsl(0, 0%, 98%);
+  padding-top:40px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+/* Header  */
+header{
+  width : 400px;
+  margin : auto;
+  text-align: center;
+
+}
+header h2:first-of-type{
+ color : hsl(234, 12%, 34%);
+ padding-bottom: 10px;
+}
+header h2:nth-child(2)
+{
+  color : hsl(234, 12%, 34%);
+  font-weight :bold;
+  padding-bottom: 10px;
+}
+header p{
+  color : hsl(229, 6%, 66%);
+  line-height: 1.5;
+}
+/* End Header  */
+/* Start Items */
+.items {
+  padding : 60px 15px ;
+  display : flex;
+  gap : 20px;
+  justify-content: center;
+  align-items: center;
+}
+.items .item{
+  background: #FFF;
+  padding : 40px 30px;
+  margin-bottom: 20px;
+  box-shadow: -1px 5px 23px 4px rgba(204,195,195,1);
+  -webkit-box-shadow: -1px 5px 23px 4px rgba(204,195,195,1);
+  -moz-box-shadow: -1px 5px 23px 4px rgba(204,195,195,1);
+  border-radius: 7px;
+}
+.items .item:first-of-type{
+  border-top: 4px solid   hsl(180, 62%, 55%);
+}
+.items .item:nth-child(3){
+  border-top: 4px solid  hsl(212, 86%, 64%) ;
+}
+.items  div .item:nth-child(1){
+  border-top : 4px solid hsl(0, 78%, 62%);
+}
+.items  div .item:nth-child(2){
+  border-top : 4px solid  hsl(34, 97%, 64%);
+}
+.items .item h3{
+  color :hsl(234, 12%, 34%);
+  padding-bottom:18px;
+}
+.items .item p{
+  color:hsl(229, 6%, 66%) ;
+  line-height : 1.6;
+  padding-bottom: 30px;
+}
+.items .item .img{
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media(max-width : 375px)
+{
+  .items{
+    flex-direction: column;
+  }
+}
+/* End Items  */
