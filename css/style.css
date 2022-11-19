@@ -1,110 +1,104 @@
+/* david rouge
+rouge la noit */
+
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-:root{
-  --main-color :#2196f3;
-  --second-color :#b9b4b459;
-  --section-color : #ececec;
-  --section-padding-top : 50px;
-  --section-padding-bottom:50px;
+body{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  background: hsl(30, 38%, 92%);
 }
-/* Poppins 200 */
-/* @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Poppins:wght@200&display=swap'); */
-/* Poppins 400 */
-/* @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Poppins:ital,wght@0,200;1,400&display=swap'); */
-
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Poppins:ital,wght@0,200;0,600;1,400&display=swap');
-/* Poppins 600 */
-
-html {
-  scroll-behavior: smooth;
+h3  , .price{
+  font-family: 'Fraunces', serif;
 }
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color:  hsl(0, 0%, 98%);
-  padding-top:40px;
-}
-
-ul {
+ul{
   list-style: none;
 }
-
-a {
-  text-decoration: none;
-}
-/* Header  */
-header{
-  width : 400px;
-  margin : auto;
-  text-align: center;
+.card{
+   max-width: 700px;
+   margin: 20px auto;
+   display: grid;
+   grid-template-columns: repeat(auto-fill , minmax(280px , 1fr));
+   /* gap:20px; */
 
 }
-header h2:first-of-type{
- color : hsl(234, 12%, 34%);
- padding-bottom: 10px;
-}
-header h2:nth-child(2)
+@media(max-width : 767px)
 {
-  color : hsl(234, 12%, 34%);
-  font-weight :bold;
-  padding-bottom: 10px;
-}
-header p{
-  color : hsl(229, 6%, 66%);
-  line-height: 1.5;
-}
-/* End Header  */
-/* Start Items */
-.items {
-  padding : 60px 15px ;
-  display : flex;
-  gap : 20px;
-  justify-content: center;
-  align-items: center;
-}
-.items .item{
-  background: #FFF;
-  padding : 40px 30px;
-  margin-bottom: 20px;
-  box-shadow: -1px 5px 23px 4px rgba(204,195,195,1);
-  -webkit-box-shadow: -1px 5px 23px 4px rgba(204,195,195,1);
-  -moz-box-shadow: -1px 5px 23px 4px rgba(204,195,195,1);
-  border-radius: 7px;
-}
-.items .item:first-of-type{
-  border-top: 4px solid   hsl(180, 62%, 55%);
-}
-.items .item:nth-child(3){
-  border-top: 4px solid  hsl(212, 86%, 64%) ;
-}
-.items  div .item:nth-child(1){
-  border-top : 4px solid hsl(0, 78%, 62%);
-}
-.items  div .item:nth-child(2){
-  border-top : 4px solid  hsl(34, 97%, 64%);
-}
-.items .item h3{
-  color :hsl(234, 12%, 34%);
-  padding-bottom:18px;
-}
-.items .item p{
-  color:hsl(229, 6%, 66%) ;
-  line-height : 1.6;
-  padding-bottom: 30px;
-}
-.items .item .img{
-  display: flex;
-  justify-content: flex-end;
-}
-
-@media(max-width : 375px)
-{
-  .items{
-    flex-direction: column;
+  .card{
+    margin : 20px;
   }
 }
-/* End Items  */
+.card .image img{
+  max-width: 100%;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+@media(max-width : 767px)
+{
+  .card .image img{
+    border-bottom-left-radius:0px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+}
+.card .info{
+  background: #FFF;
+  padding: 23px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+@media(max-width : 767px)
+{
+  .card .info{
+    border-top-right-radius : 0px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}
+.card .info .title{
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #777;
+}
+.card .info h3{
+  font-size: 35px;
+  margin: 38px 0;
+}
+.card .info p{
+  color: #777;
+  line-height: 1.8;
+}
+.card .info .price{
+ margin: 30px 0;
+
+}
+.card .info .price li{
+  display: inline-block;
+}
+.card .info .price li:first-of-type{
+  font-size: 40px;
+  color: hsl(158, 36%, 37%);
+}
+.card .info .price li:nth-child(2){
+  margin-left: 15px;
+  color: #777;
+  text-decoration: line-through;
+}
+.card .info button{
+ cursor : pointer;
+ width: 100%;
+ cursor: pointer;
+ background: hsl(158, 36%, 37%);;
+ border: none;
+ padding: 12px;
+ color : #FFF;
+ font-weight: bold;
+}
+.card .info button img{
+  margin-right: 14px;
+}
